@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // We'll refer to our source and dist paths frequently, so let's store them here
 const PATH_SOURCE = path.join(__dirname, './src');
@@ -82,6 +83,11 @@ module.exports = env => {
       new HtmlWebpackPlugin({
         template: path.join(PATH_SOURCE, './index.html'),
       }),
+
+      // This plugin will delete all files inside `output.path` (the dist directory),
+      // but the directory itself will be kept.
+      // https://github.com/johnagan/clean-webpack-plugin
+      new CleanWebpackPlugin(),
     ],
   };
 };
