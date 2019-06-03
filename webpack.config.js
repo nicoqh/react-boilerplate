@@ -94,6 +94,11 @@ module.exports = env => {
                   // is no need to do it here.)
                   // targets: "",
                 }],
+
+                // The react preset includes several plugins that are required to write
+                // a React app. For example, it transforms JSX:
+                // <div> -> React.createElement('div')
+                '@babel/preset-react',
               ],
             },
           }
