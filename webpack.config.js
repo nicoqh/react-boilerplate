@@ -106,6 +106,19 @@ module.exports = (env) => {
                     // targets: "",
                   },
                 ],
+                // The react preset includes plugins that are required for React
+                // apps. For example, it inclues a plugin that transforms JSX.
+                [
+                  "@babel/preset-react",
+                  {
+                    // Tell "plugin-transform-react-jsx" which runtime to use.
+                    // The "automatic" runtime will:
+                    // * Import the jsx() function in your JSX files:
+                    //   `import { jsx as _jsx } from "react";`
+                    // * Transform JSX: `<div />` to `_jsx("div")`
+                    runtime: "automatic",
+                  },
+                ],
               ],
             },
           },
