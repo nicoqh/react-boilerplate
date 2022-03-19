@@ -13,6 +13,7 @@
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.29.4",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.70.0",

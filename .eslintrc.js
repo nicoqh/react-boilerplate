@@ -6,6 +6,10 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
+
+    // Disables formatting rules from *all* ESLint configs.
+    // Provided by `eslint-config-prettier`.
+    "prettier",
   ],
   parserOptions: {
     ecmaFeatures: {
