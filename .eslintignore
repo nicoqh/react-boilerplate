@@ -1,0 +1,4 @@
+# node_modules and dotfiles are ignored by default.
+# https://eslint.org/docs/user-guide/configuring#eslintignore
+
+dist
