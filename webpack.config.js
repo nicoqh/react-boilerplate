@@ -24,6 +24,32 @@ module.exports = (env) => {
     // https://webpack.js.org/configuration/mode
     mode: environment,
 
+    // Configuration options for Webpack DevServer, an Express web server that
+    // aids with development and provides live reloading out of the box.
+    devServer: {
+      static: {
+        // The dev server will serve content from this directory.
+        directory: PATH_DIST,
+      },
+
+      // Specify a host and port number.
+      host: "localhost",
+      port: 8080,
+
+      // When using the HTML5 History API (you'll probably do this with React
+      // later), index.html should be served in place of 404 responses.
+      historyApiFallback: true,
+
+      client: {
+        // Show a full-screen overlay in the browser when there are compiler
+        // errors or warnings.
+        overlay: {
+          errors: true,
+          warnings: true,
+        },
+      },
+    },
+
     // The point or points to enter the application. This is where Webpack will
     // start. We generally have one entry point per HTML page. For single-page
     // applications, this means one entry point. For traditional multi-page apps,
