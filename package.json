@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "webpack --config webpack.config.js"
+    "build": "webpack --env environment=production --config webpack.config.js",
+    "dev": "webpack --env environment=development --config webpack.config.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
